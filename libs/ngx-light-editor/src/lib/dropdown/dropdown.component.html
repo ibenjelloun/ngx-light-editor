@@ -1,0 +1,27 @@
+<div class="dropdown-container">
+  <button
+    [title]="options.textStylesTitle"
+    (click)="openClose($event)"
+    class="dropdown-button"
+  >
+    <span>{{ label }}</span>
+    <img
+      *ngIf="!isOpen"
+      src="https://fonts.gstatic.com/s/i/materialicons/keyboard_arrow_down/v1/24px.svg?download=true"
+    />
+    <img
+      *ngIf="isOpen"
+      src="https://fonts.gstatic.com/s/i/materialicons/keyboard_arrow_up/v1/24px.svg?download=true"
+    />
+  </button>
+  <div *ngIf="isOpen" class="dropdown-content">
+    <button
+      *ngFor="let item of items"
+      (click)="selectItem(item)"
+      [class]="item.class"
+      [title]="options.textStylesPrefix + ' ' + item.label"
+    >
+      {{ item.label }}
+    </button>
+  </div>
+</div>

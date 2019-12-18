@@ -1,0 +1,34 @@
+<h3>Editor without any actions</h3>
+<led-itor [(ngModel)]="value"></led-itor>
+<hr />
+{{ value }}
+<hr />
+<div [innerHtml]="value"></div>
+<hr />
+<h3>Editor with only bold action</h3>
+<led-itor [(ngModel)]="value2" [actions]="actions"></led-itor>
+<hr />
+{{ value2 }}
+<hr />
+<div [innerHtml]="value2"></div>
+<hr />
+<h3>Editor with custom actions</h3>
+<led-itor [(ngModel)]="value2" [actions]="customActions"></led-itor>
+<hr />
+{{ value2 }}
+<hr />
+<div [innerHtml]="value2"></div>
+<hr />
+<h3>Editor with defined text styles</h3>
+<led-itor [(ngModel)]="value2" [textStyles]="textStyles"></led-itor>
+<hr />
+{{ value2 }}
+<hr />
+<div [innerHtml]="value2"></div>
+<hr />
+<h3>Editor with all actions and text styles</h3>
+<led-itor [(ngModel)]="value2" [textStyles]="textStyles" [actions]="allActions"></led-itor>
+<hr />
+{{ value2 }}
+<hr />
+<div [innerHtml]="value2"></div>

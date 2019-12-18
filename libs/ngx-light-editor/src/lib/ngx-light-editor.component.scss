@@ -1,0 +1,48 @@
+.editor {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  min-height: 180px;
+  overflow-wrap: break-word;
+  &:focus {
+    outline: 0;
+  }
+}
+
+.editor-menu {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  border: 1px solid #ccc;
+  margin-bottom: -1px;
+  min-height: 1.8rem;
+  button {
+    display: flex;
+    background: white;
+    border: 0px;
+    outline: 0;
+    margin: 0.05rem;
+    min-width: 1.3rem;
+    border-radius: 10%;
+    cursor: pointer;
+    &:hover {
+      background: #ddd;
+    }
+    .style-icon {
+      height: 1.3rem;
+    }
+    &.active-block {
+      background: #2ecc71;
+    }
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}

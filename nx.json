@@ -1,0 +1,21 @@
+{
+  "npmScope": "ngx-light-editor",
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": "*",
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "ngx-light-editor": {
+      "tags": []
+    },
+    "ngx-light-editor-demo-e2e": {
+      "tags": []
+    },
+    "ngx-light-editor-demo": {
+      "tags": []
+    }
+  }
+}

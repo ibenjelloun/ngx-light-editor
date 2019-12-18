@@ -1,0 +1,42 @@
+<div *ngIf="_textStyles?.length || actions?.length" class="editor-menu">
+  <led-dropdown
+    *ngIf="_textStyles?.length"
+    [label]="currentTextStyleLabel"
+    [items]="_textStyles"
+    (menuAction)="formatBlock($event)"
+    [options]="options"
+  ></led-dropdown>
+  <ng-container *ngFor="let editorAction of actions">
+    <button
+      [title]="editorAction.label"
+      (click)="editorActionHandler(editorAction)"
+      [class.active-block]="
+        flags[editorAction.block] ||
+        styleFlags[(editorAction.style?.key)] === editorAction.style?.value
+      "
+    >
+      <img
+        class="style-icon"
+        [src]="editorAction.iconPath"
+        [alt]="editorAction.label"
+      /><span
+        *ngIf="
+          flags[editorAction.block] ||
+          styleFlags[(editorAction.style?.key)] === editorAction.style?.value
+        "
+        class="sr-only"
+        >{{ options.activeActionLabel }}</span
+      >
+    </button>
+  </ng-container>
+</div>
+
+<div
+  class="editor"
+  [ledItable]="true"
+  [(ngModel)]="text"
+  (ngModelChange)="handleChange($event)"
+  [disabled]="disabled"
+  (focus)="onTouched && onTouched()"
+  (blur)="onTouched && onTouched()"
+></div>

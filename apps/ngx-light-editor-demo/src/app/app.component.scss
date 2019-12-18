@@ -1,0 +1,86 @@
+.editor-title {
+  font-size: 1.1rem;
+  color: #2980b9;
+}
+
+.editor-title-2 {
+  font-size: 1.1rem;
+  color: #2c3e50;
+}
+
+.editor-sub-title {
+  font-size: 0.9rem;
+  color: #95a5a6;
+}
+
+.editor {
+  p {
+    b {
+      font-weight: 800;
+    }
+  }
+}
+
+.editor-black {
+  background: black;
+  color: white;
+  .editor {
+    background: black;
+    color: white;
+  }
+  .editor-title {
+    font-size: 1.1rem;
+    color: #ecf0f1;
+  }
+  .editor-title-2 {
+    font-size: 1.1rem;
+    color: #f1c40f;
+  }
+  .editor-sub-title {
+    font-size: 0.9rem;
+    color: #e67e22;
+  }
+  a {
+    color: #e74c3c;
+  }
+  .dropdown-content {
+    button {
+      background: black;
+      &[class='undefined'] {
+        color: white;
+      }
+    }
+  }
+}
+
+.editor-blue {
+  background: #2c3e50;
+  color: white;
+  .editor {
+    background: #2c3e50;
+    color: white;
+  }
+  .editor-title {
+    font-size: 1.1rem;
+    color: #ecf0f1;
+  }
+  .editor-title-2 {
+    font-size: 1.1rem;
+    color: #9b59b6;
+  }
+  .editor-sub-title {
+    font-size: 0.9rem;
+    color: #3498db;
+  }
+  a {
+    color: #2ecc71;
+  }
+  .dropdown-content {
+    button {
+      background: #2c3e50;
+      &[class='undefined'] {
+        color: white;
+      }
+    }
+  }
+}
